@@ -1,1 +1,6 @@
+git init
+git add .
+git commit -m "Create txt files: 5 15 25 35"
+Добваляем в папку что-то
+git add .
 git commit -m "Add answer"
