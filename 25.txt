@@ -1,0 +1,98 @@
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git checkout -b vetka1
+Switched to a new branch 'vetka1'
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ touch 25konflikt.txt
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git add .
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git commit -m "Hello world"
+[vetka1 ce4c7ca] Hello world
+ 1 file changed, 1 insertion(+)
+ create mode 100644 25konflikt.txt
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git merge vetka1
+Updating cf94ec8..ce4c7ca
+Fast-forward
+ 25konflikt.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 25konflikt.txt
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git add .
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git commit -m "Change 25 konflikt"
+[master 22059dc] Change 25 konflikt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git checkout vetka1
+Switched to branch 'vetka1'
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git add .
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git commit -m "Change branch 25 konflikt"
+[vetka1 bf494cb] Change branch 25 konflikt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (vetka1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master)
+$ git merge vetka1
+Auto-merging 25konflikt.txt
+CONFLICT (content): Merge conflict in 25konflikt.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   25konflikt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   25konflikt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master|MERGING)
+$ git add .
+
+PuzAsus@DESKTOP-7C7RCMR MINGW64 ~/Desktop/Универ/TIIT/Лабы ТИИТ/Labaratornaya 2 (master|MERGING)
+$ git commit
+[master 6317dc8] Merge branch 'vetka1' into master
